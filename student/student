@@ -1,0 +1,243 @@
+#include <stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+
+#define BUFSIZE  32
+#define STUNUM   32
+
+#define QY_STUDENT_H
+//#ifndef QY_STUDENT_H
+
+#define NAMELEN  32
+#define MINAGE   4
+#define MAXAGE   100
+#define MINSTUDYID  20140001
+#define MAXSTUDYID  20149999
+
+typedef struct student {
+    char name[NAMELEN];
+    int age;
+    int studyID;
+    int useFlag; /*0:unuse 1:using */
+}STU;  //结构体
+
+enum command {
+    kListStudents,
+    kAddStudent,
+    kDeleStudent,
+    kSearchStudent,
+    kQuiteCMD,
+}; //枚结构体
+
+extern STU *allocStudentRecords(int number);
+extern void printfStudents(STU *stu);
+extern int addStudent(STU *stu,char *name,int age,int studyID);
+extern int delStudent(STU *stu,int studyID);
+extern void dellocStudentRecords(STU *);
+
+static int numberofStudents;
+
+//为结构体创造个地址空间
+STU *allocStudentRecords(int number)
+{
+    STU *stu = NULL;
+    int size = number * sizeof(STU);
+    stu = malloc(size);
+    if (stu == NULL){
+        perror("malloc");
+        return NULL;
+    }
+    memset(stu,0,size);
+    numberofStudents = number;
+    return stu;
+}
+
+static void printfStudent(STU *stu,int index)
+{
+    printf("Student's Name is [%s]\n",stu[index].name);
+    printf("Student's Age is [%d]\n",stu[index].age);
+    printf("Student's StudyID is [%d]\n",stu[index].studyID);
+    printf("============================================");
+
+}
+//打印学生信息
+void printfStudents(STU *stu)
+{
+    for (int i = 0;i < numberofStudents;i++){
+        if (stu[i].useFlag){
+            printfStudent(stu,i);
+        }
+    }
+}
+//检查学生号是否冲突，冲突返回－1，不冲突返回0
+static int checkStudyID(STU *stu,int studyID)
+{
+     for (int i = 0;i < numberofStudents;i++){
+         if(studyID == stu[i].studyID && stu[i].useFlag ==1){
+             return -1;
+         }
+     }
+     return 0;
+}
+//获取空闲位置索引
+static int getFreePosition (STU *stu)
+{
+    for (int i = 0;i < numberofStudents;i++){
+        if (stu[i].useFlag == 0){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int addStident(STU *stu,char *name,int age,int studyID)
+{
+    int index = -1;
+    // 1,检查学号是否冲突
+    if(checkStudyID(stu,studyID) < 0){
+        fprintf(stderr,"Student <%d> Already Exsist !\n",studyID);
+        return -1;
+    }
+    //2.找到空闲位置索引
+    index = getFreePosition(stu);
+    if (index < 0){
+        fprintf(stderr,"No Free Position to Add New Student !\n");
+        return -1;
+    }
+    //3 根据传入的数据进行相应的赋值
+    strncpy(stu[index].name,name,NAMELEN-1);
+    stu[index].age = age;
+    stu[index].studyID = studyID;
+    stu[index].useFlag = 1;
+
+    printf("Added Successfully!\n");
+    return 0;
+}
+//删除操作
+int delStudent(STU *stu,int studyID)
+{
+    for(int i = 0;i<numberofStudents;i++){
+        if (stu[i].studyID == studyID && stu[i].useFlag){
+            stu[i].useFlag = 0;
+            printf("Deleted Successfully!\n");
+            return 0;
+        }
+    }
+    fprintf(stderr,"Student <%d> to delete does not exsist !\n",studyID);
+    return -1;
+}
+//查找操作
+int sarchStudent(STU *stu,int studyID){
+    for (int i = 0;i< numberofStudents;i++){
+        if (stu[i].studyID == studyID && stu[i].useFlag){
+            printfStudent(stu,i);
+            return 0;
+        }
+    }
+    fprintf(stderr,"Student <%d> to search does not exsist!\n",studyID);
+    return -1;
+}
+
+void dellocStudentRecords(STU *stu)
+{
+    free(stu);
+}
+
+/*
+ *将用户的输入转换成long类型并返回转换结果
+ 返回 －1代表转换失败
+ */
+
+static long getInput(void)
+{
+    char buf[BUFSIZE]= {0};
+    long result = -1;
+
+    fgets(buf,BUFSIZE,stdin);
+    result = strtol(buf,NULL,0);
+    if((result == 0 && errno == EINVAL) || (errno == ERANGE))
+    {
+        result = -1;
+        errno = 0;
+    }
+    return result;
+}
+
+static int getStudyID(void){
+    int studyID = -1;
+_InputStudyID:
+    fprintf(stdout,"please Input Student's study ID:\n");
+    studyID = (int)getInput();
+    if(studyID < MINSTUDYID || studyID > MAXSTUDYID){
+        fprintf(stderr,"Invalid input!\n");
+        goto _InputStudyID;
+    }
+    return studyID;
+}
+int main(void)
+{
+    long cmd = -1;
+    char stuName[NAMELEN] = {0};
+    int stuAge = -1;
+    int studyID = -1;
+    STU *stu = NULL;
+
+    //为学生记录申请内存并初始化
+    stu = allocStudentRecords(STUNUM);
+    if (NULL == stu){
+        goto _Fail;
+    }
+    while (1){
+        //提示用户输入命令
+        fprintf(stdout,"please input command number:\n 0 -list\t1 - add \t2 - delete\t3 - search\t4 - quite\n");
+        //接受用户输入命令并进行检查
+        cmd = getInput();
+        fpurge(stdin);
+        if(cmd == -1 || cmd > kQuiteCMD || cmd < kListStudents)
+        {
+            fprintf(stderr,"invalid command !\n");
+            continue;
+        }
+        //3.匹配用户输入的命令执行
+        switch(cmd){
+            case kListStudents:
+                printStudents(stu);
+                break;
+            case kAddStudent:
+                fprintf(stdout,"please Input student's name :\n");
+                fgets(stuName,NAMELEN,stdin);
+                stuName[strlen(stuName)-1]='\0';
+_InputAge:
+                fprintf(stdout,"please input student's age :\n");
+                stuAge = (int)getInput();
+                if(stuAge < MINAGE || stuAge > MAXAGE){
+                    fprintf(stderr,"invalid input(Age must in[4 -100])\n");
+                    goto _InputAge;
+                }
+                studyID = getStudyID();
+                addStudent(stu,stuName,stuAge,studyID);
+                break;
+            case kDeleStudent:
+                studyID = getStudyID();
+                delStudent(stu,studyID);
+                break;
+            case kSearchStudent:
+                studyID = getStudyID();
+                searchStudent(stu,studyID);
+                break;
+            case kQuiteCMD:
+                 goto _exit;
+                 break;
+            default:
+                 fprintf(stderr,"can't go here !\n");
+                 break;
+        }
+    }
+_Fail:
+    exit(1);
+_exit:
+    deallocStudentRecords(stu);
+    return 0;
+}
+
