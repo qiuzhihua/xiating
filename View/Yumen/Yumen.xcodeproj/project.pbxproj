@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC76A91E19FCCE6500604BD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76A91D19FCCE6500604BD3 /* Foundation.framework */; };
+		CC76A92019FCCE6500604BD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76A91F19FCCE6500604BD3 /* CoreGraphics.framework */; };
+		CC76A92219FCCE6500604BD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76A92119FCCE6500604BD3 /* UIKit.framework */; };
+		CC76A92819FCCE6500604BD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC76A92619FCCE6500604BD3 /* InfoPlist.strings */; };
+		CC76A92A19FCCE6500604BD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76A92919FCCE6500604BD3 /* main.m */; };
+		CC76A92E19FCCE6500604BD3 /* qiudushuAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76A92D19FCCE6500604BD3 /* qiudushuAppDelegate.m */; };
+		CC76A93119FCCE6500604BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC76A92F19FCCE6500604BD3 /* Main.storyboard */; };
+		CC76A93419FCCE6500604BD3 /* qiudushuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76A93319FCCE6500604BD3 /* qiudushuViewController.m */; };
+		CC76A93619FCCE6500604BD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC76A93519FCCE6500604BD3 /* Images.xcassets */; };
+		CC76A93D19FCCE6500604BD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76A93C19FCCE6500604BD3 /* XCTest.framework */; };
+		CC76A93E19FCCE6500604BD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76A91D19FCCE6500604BD3 /* Foundation.framework */; };
+		CC76A93F19FCCE6500604BD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC76A92119FCCE6500604BD3 /* UIKit.framework */; };
+		CC76A94719FCCE6500604BD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC76A94519FCCE6500604BD3 /* InfoPlist.strings */; };
+		CC76A94919FCCE6500604BD3 /* YumenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76A94819FCCE6500604BD3 /* YumenTests.m */; };
+		CC76A99619FCE11100604BD3 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC76A99519FCE11100604BD3 /* 0.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC76A94019FCCE6500604BD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC76A91219FCCE6500604BD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC76A91919FCCE6500604BD3;
+			remoteInfo = Yumen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC76A91A19FCCE6500604BD3 /* Yumen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yumen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC76A91D19FCCE6500604BD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC76A91F19FCCE6500604BD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CC76A92119FCCE6500604BD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC76A92519FCCE6500604BD3 /* Yumen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yumen-Info.plist"; sourceTree = "<group>"; };
+		CC76A92719FCCE6500604BD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC76A92919FCCE6500604BD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC76A92B19FCCE6500604BD3 /* Yumen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yumen-Prefix.pch"; sourceTree = "<group>"; };
+		CC76A92C19FCCE6500604BD3 /* qiudushuAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qiudushuAppDelegate.h; sourceTree = "<group>"; };
+		CC76A92D19FCCE6500604BD3 /* qiudushuAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qiudushuAppDelegate.m; sourceTree = "<group>"; };
+		CC76A93019FCCE6500604BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC76A93219FCCE6500604BD3 /* qiudushuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qiudushuViewController.h; sourceTree = "<group>"; };
+		CC76A93319FCCE6500604BD3 /* qiudushuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qiudushuViewController.m; sourceTree = "<group>"; };
+		CC76A93519FCCE6500604BD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CC76A93B19FCCE6500604BD3 /* YumenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC76A93C19FCCE6500604BD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CC76A94419FCCE6500604BD3 /* YumenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YumenTests-Info.plist"; sourceTree = "<group>"; };
+		CC76A94619FCCE6500604BD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC76A94819FCCE6500604BD3 /* YumenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YumenTests.m; sourceTree = "<group>"; };
+		CC76A99519FCE11100604BD3 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC76A91719FCCE6500604BD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76A92019FCCE6500604BD3 /* CoreGraphics.framework in Frameworks */,
+				CC76A92219FCCE6500604BD3 /* UIKit.framework in Frameworks */,
+				CC76A91E19FCCE6500604BD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC76A93819FCCE6500604BD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76A93D19FCCE6500604BD3 /* XCTest.framework in Frameworks */,
+				CC76A93F19FCCE6500604BD3 /* UIKit.framework in Frameworks */,
+				CC76A93E19FCCE6500604BD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC76A91119FCCE6500604BD3 = {
+			isa = PBXGroup;
+			children = (
+				CC76A92319FCCE6500604BD3 /* Yumen */,
+				CC76A94219FCCE6500604BD3 /* YumenTests */,
+				CC76A91C19FCCE6500604BD3 /* Frameworks */,
+				CC76A91B19FCCE6500604BD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC76A91B19FCCE6500604BD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC76A91A19FCCE6500604BD3 /* Yumen.app */,
+				CC76A93B19FCCE6500604BD3 /* YumenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC76A91C19FCCE6500604BD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC76A91D19FCCE6500604BD3 /* Foundation.framework */,
+				CC76A91F19FCCE6500604BD3 /* CoreGraphics.framework */,
+				CC76A92119FCCE6500604BD3 /* UIKit.framework */,
+				CC76A93C19FCCE6500604BD3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC76A92319FCCE6500604BD3 /* Yumen */ = {
+			isa = PBXGroup;
+			children = (
+				CC76A92C19FCCE6500604BD3 /* qiudushuAppDelegate.h */,
+				CC76A92D19FCCE6500604BD3 /* qiudushuAppDelegate.m */,
+				CC76A92F19FCCE6500604BD3 /* Main.storyboard */,
+				CC76A93219FCCE6500604BD3 /* qiudushuViewController.h */,
+				CC76A93319FCCE6500604BD3 /* qiudushuViewController.m */,
+				CC76A93519FCCE6500604BD3 /* Images.xcassets */,
+				CC76A92419FCCE6500604BD3 /* Supporting Files */,
+			);
+			path = Yumen;
+			sourceTree = "<group>";
+		};
+		CC76A92419FCCE6500604BD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC76A92519FCCE6500604BD3 /* Yumen-Info.plist */,
+				CC76A92619FCCE6500604BD3 /* InfoPlist.strings */,
+				CC76A92919FCCE6500604BD3 /* main.m */,
+				CC76A92B19FCCE6500604BD3 /* Yumen-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC76A94219FCCE6500604BD3 /* YumenTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC76A94819FCCE6500604BD3 /* YumenTests.m */,
+				CC76A99519FCE11100604BD3 /* 0.jpg */,
+				CC76A94319FCCE6500604BD3 /* Supporting Files */,
+			);
+			path = YumenTests;
+			sourceTree = "<group>";
+		};
+		CC76A94319FCCE6500604BD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC76A94419FCCE6500604BD3 /* YumenTests-Info.plist */,
+				CC76A94519FCCE6500604BD3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC76A91919FCCE6500604BD3 /* Yumen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC76A94C19FCCE6500604BD3 /* Build configuration list for PBXNativeTarget "Yumen" */;
+			buildPhases = (
+				CC76A91619FCCE6500604BD3 /* Sources */,
+				CC76A91719FCCE6500604BD3 /* Frameworks */,
+				CC76A91819FCCE6500604BD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yumen;
+			productName = Yumen;
+			productReference = CC76A91A19FCCE6500604BD3 /* Yumen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC76A93A19FCCE6500604BD3 /* YumenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC76A94F19FCCE6500604BD3 /* Build configuration list for PBXNativeTarget "YumenTests" */;
+			buildPhases = (
+				CC76A93719FCCE6500604BD3 /* Sources */,
+				CC76A93819FCCE6500604BD3 /* Frameworks */,
+				CC76A93919FCCE6500604BD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC76A94119FCCE6500604BD3 /* PBXTargetDependency */,
+			);
+			name = YumenTests;
+			productName = YumenTests;
+			productReference = CC76A93B19FCCE6500604BD3 /* YumenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC76A91219FCCE6500604BD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = qiudushu;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = qiudushu;
+				TargetAttributes = {
+					CC76A93A19FCCE6500604BD3 = {
+						TestTargetID = CC76A91919FCCE6500604BD3;
+					};
+				};
+			};
+			buildConfigurationList = CC76A91519FCCE6500604BD3 /* Build configuration list for PBXProject "Yumen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC76A91119FCCE6500604BD3;
+			productRefGroup = CC76A91B19FCCE6500604BD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC76A91919FCCE6500604BD3 /* Yumen */,
+				CC76A93A19FCCE6500604BD3 /* YumenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC76A91819FCCE6500604BD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76A93619FCCE6500604BD3 /* Images.xcassets in Resources */,
+				CC76A92819FCCE6500604BD3 /* InfoPlist.strings in Resources */,
+				CC76A93119FCCE6500604BD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC76A93919FCCE6500604BD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76A99619FCE11100604BD3 /* 0.jpg in Resources */,
+				CC76A94719FCCE6500604BD3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC76A91619FCCE6500604BD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76A92E19FCCE6500604BD3 /* qiudushuAppDelegate.m in Sources */,
+				CC76A93419FCCE6500604BD3 /* qiudushuViewController.m in Sources */,
+				CC76A92A19FCCE6500604BD3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC76A93719FCCE6500604BD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC76A94919FCCE6500604BD3 /* YumenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC76A94119FCCE6500604BD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC76A91919FCCE6500604BD3 /* Yumen */;
+			targetProxy = CC76A94019FCCE6500604BD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC76A92619FCCE6500604BD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC76A92719FCCE6500604BD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CC76A92F19FCCE6500604BD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC76A93019FCCE6500604BD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC76A94519FCCE6500604BD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC76A94619FCCE6500604BD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC76A94A19FCCE6500604BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CC76A94B19FCCE6500604BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC76A94D19FCCE6500604BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yumen/Yumen-Prefix.pch";
+				INFOPLIST_FILE = "Yumen/Yumen-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CC76A94E19FCCE6500604BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yumen/Yumen-Prefix.pch";
+				INFOPLIST_FILE = "Yumen/Yumen-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CC76A95019FCCE6500604BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yumen.app/Yumen";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yumen/Yumen-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "YumenTests/YumenTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CC76A95119FCCE6500604BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yumen.app/Yumen";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yumen/Yumen-Prefix.pch";
+				INFOPLIST_FILE = "YumenTests/YumenTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC76A91519FCCE6500604BD3 /* Build configuration list for PBXProject "Yumen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC76A94A19FCCE6500604BD3 /* Debug */,
+				CC76A94B19FCCE6500604BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC76A94C19FCCE6500604BD3 /* Build configuration list for PBXNativeTarget "Yumen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC76A94D19FCCE6500604BD3 /* Debug */,
+				CC76A94E19FCCE6500604BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC76A94F19FCCE6500604BD3 /* Build configuration list for PBXNativeTarget "YumenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC76A95019FCCE6500604BD3 /* Debug */,
+				CC76A95119FCCE6500604BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC76A91219FCCE6500604BD3 /* Project object */;
+}
